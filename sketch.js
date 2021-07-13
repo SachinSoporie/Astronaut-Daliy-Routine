@@ -57,7 +57,8 @@ function draw() {
     astronaut.addAnimation("drink", drink);
     astronaut.changeAnimation("drink");
   }
-  if(keyDown("m")){ astronaut.addAnimation("moving", move); 
+  if(keyDown("m")){ 
+  astronaut.addAnimation("moving", move); 
   astronaut.changeAnimation("moving"); 
   astronaut.velocityX = 1; 
   astronaut.velocityY = 1; 
