@@ -15,8 +15,7 @@ gym = loadAnimation("gym1.png", "gym2.png", "gym11.png", "gym12.png");
 eat = loadAnimation("eat1.png", "eat2.png");
 drink = loadAnimation("drink1.png", "drink2.png");
 bath = loadAnimation("bath1.png", "bath2.png");
-move = loadAnimation("move.png" , "move1.png");
-
+move = loadAnimation("move.png","move1.png");
 }
 function setup() {
   createCanvas(800,400);
@@ -58,14 +57,13 @@ function draw() {
     astronaut.addAnimation("drink", drink);
     astronaut.changeAnimation("drink");
   }
-  if(keyDown("M")){
-    astronaut.addAnimation("move", move);
-    astronaut.changeAnimation("move");
-    astronaut.velocityX = 3;
-    astronaut.velocityY = 2;
-    
-    astronaut.bounceOff(edges);
-  }
+  if(keyDown("m")){ astronaut.addAnimation("moving", move); 
+  astronaut.changeAnimation("moving"); 
+  astronaut.velocityX = 1; 
+  astronaut.velocityY = 1; 
+
+  astronaut.bounceOff(edges);
+}
 
   drawSprites();
 }
