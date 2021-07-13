@@ -29,6 +29,8 @@ function setup() {
   astronaut.addAnimation("sleeping", sleep);
   astronaut.scale = 0.1;
 
+  createEdgeSprites();
+
 }
 
 function draw() {
@@ -61,6 +63,8 @@ function draw() {
     astronaut.changeAnimation("move");
     astronaut.velocityX = 3;
     astronaut.velocityY = 2;
+    
+    astronaut.bounceOff(edges);
   }
 
   drawSprites();
