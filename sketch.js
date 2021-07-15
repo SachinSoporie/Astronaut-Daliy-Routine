@@ -4,6 +4,7 @@ var gym1, gym2, gym11, gym12;
 var move, modrink1, drink2;
 var eat1,ve1;
 var iss, brush, sleep;
+var edges;
 
 
 function preload(){
@@ -28,7 +29,7 @@ function setup() {
   astronaut.addAnimation("sleeping", sleep);
   astronaut.scale = 0.1;
 
-  createEdgeSprites();
+  edges = createEdgeSprites();
 
 }
 
@@ -57,7 +58,7 @@ function draw() {
     astronaut.addAnimation("drink", drink);
     astronaut.changeAnimation("drink");
   }
-  if(keyDown("m")){ 
+  if(keyDown("M")){ 
   astronaut.addAnimation("moving", move); 
   astronaut.changeAnimation("moving"); 
   astronaut.velocityX = 1; 
